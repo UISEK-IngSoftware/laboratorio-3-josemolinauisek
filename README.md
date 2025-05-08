@@ -1,10 +1,10 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/TBhafgma)
+[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/oDY7CZkD)
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/vl4jljH6)
-# 💻 Laboratorio 3: Mi Currículum Web
+# 💻 Laboratorio 2: Mi Currículum Web
 
 ## Objetivo
 
-Basándose en el Laboratorio 2. El presente laboratorio tiene como objetivo profundizar al estudiante al desarrollo web usnado Javascript, a través de la creacion una página web con el currículum vitae del estudiante.
+Basándose en el Laboratorio 1. El presente laboratorio tiene como objetivo profundizar al estudiante al desarrollo web usnado CSS, a través de la creacion una página web con el currículum vitae del estudiante.
 
 ---
 
@@ -12,10 +12,9 @@ Basándose en el Laboratorio 2. El presente laboratorio tiene como objetivo prof
 
 El proyecto debe contener al menos los siguientes archivos:
 
-
+/laboratorio-1/ <br>
   ├── index.html <br>
   ├── styles.css <br>
-  └── scripts.js <br>
   └── README.md <br>
 
 
@@ -34,21 +33,82 @@ Crear una página HTML que contenga:
 - Sección de **educación** y **experiencia laboral**
 - Enlaces a tus **redes sociales o correo electrónico** usando `<a href="...">`
 
-### 2. Generando tu primer Javascript
+### 2. Estilos con CSS (estilos.css)
 
-Crear un archivo `scripts.js` y usa **id's (`id`)** para acciones a los siguientes elementos dom:
+Crear un archivo `estilos.css` y usa **clases (`class`)** para aplicar estilos como:
 
-- Lista de habilidades: Cuando el usuario haga clic en el enlace de lista de habilidades. Estas se deberán desplegar u ocultar
-- Este mismo criterio aplica para la lista de "Educación"
-- Los estilos de cada sección señalada previamente deberá ajustarse para mejorar la navegabilidad
+- Color de fondo
+- Color del texto
+- Tamaño y tipo de letra
+- Bordes o separación entre secciones
+- Alineación del texto
+- Estilos para la imagen
+- Organizar las secciones:
+   - **Habilidades**
+   - **Educación**
+   Usando **Flexbox** para mostrarlas una al lado de la otra en pantallas grandes, y en columna en pantallas pequeñas.
+- Aplicar al menos los siguientes estilos:
+   - `display: flex`
+   - `justify-content`
+   - `align-items`
+   - `flex-direction: row` y `column`
+- Usar `class` para aplicar los estilos desde un archivo CSS externo (`styles.css`).
 
-### 3. Conecta el Javascript con tu HTML
+### 3. Conecta el CSS con tu HTML
 
 En tu archivo `index.html`, dentro de la etiqueta `<head>`, enlaza el archivo de estilos:
 
 ```html
- <script src="scripts.js"></script>
+<link rel="stylesheet" href="estilos.css">
 ```
+
+
+
+## 💡 Sugerencia de estructura HTML
+
+```html
+<div class="secciones">
+  <div class="habilidades">
+    <h2>Habilidades</h2>
+    <ul>
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>Trabajo en equipo</li>
+    </ul>
+  </div>
+
+  <div class="educacion">
+    <h2>Educación</h2>
+    <p>Licenciatura en Ingeniería Informática - PUCE</p>
+  </div>
+</div>
+```
+
+## 💡 Sugerencia de CSS con Flexbox
+
+```css
+.secciones {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.habilidades, .educacion {
+  flex: 1;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+@media (max-width: 768px) {
+  .secciones {
+    flex-direction: column;
+  }
+}
+```
+
 
 ## Entrega del laboratorio
 Clonar el repositorio (desde GitHub Classroom)
@@ -66,6 +126,6 @@ cd <nombre-del-repositorio>
 ### 5. ✅ Hacer commit y push de tus cambios
 ```bash
 git add .
-git commit -m "Laboratorio 3 terminado"
+git commit -m "Laboratorio 1 terminado"
 git push origin main
 ```

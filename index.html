@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Currículum de José</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="cv-container">
+        <div class="foto">
+            <img src="foto.jpg" alt="Foto de José">
+        </div>
+
+        <h1>José Manuel Molina</h1>   
+        <div class="contacto">
+            <p>📧 josemanuelmolinabalaguera@gmail.com</p>
+            <p>📱 0958703698</p>
+            <p>📍 Quito, Ecuador</p>
+        </div>
+
+        <h2>👨‍💻 Perfil</h2>
+        <p>Estudiante de Ingeniería de Software, curioso y con ganas de seguir aprendiendo.</p>
+
+        <h2 onclick="toggleSkills('xp-list')">💼 Experiencia</h2>
+        <ul id="xp-list">
+            <li>Auxiliar de Bodega – Clínica de Neurociencias</li>
+            <li>Vendedor y Cajero – Dayana Boutique</li>
+            <li>Atención al Cliente Telefónica</li>
+        </ul>
+
+        <h2 onclick="toggleSkills('education-list')">🎓 Educación</h2>
+        <ul id="education-list">
+            <li>Ingeniería de Software – Tercer semestre</li>
+            <li>Bachillerato Técnico</li>
+        </ul>
+
+        <h2 onclick="toggleSkills('skills-list')">🛠️ Habilidades</h2>
+        <ul id="skills-list">
+            <li>Manejo de inventarios</li>
+            <li>Facturación</li>
+            <li>Trabajo en equipo</li>
+            <li>HTML básico</li>
+        </ul>
+
+        <h2 onclick="toggleSkills('idioma-list')">🌐 Idiomas</h2>
+        <ul id="idioma-list">
+            <li>Inglés (Básico)</li>
+        </ul>
+
+        <h2 onclick="toggleSkills('redes-list')">📲 Redes Sociales</h2>
+        <ul id="redes-list">
+            <li>Instagram:
+                <a href="https://www.instagram.com/jose.m4nuel/" target="_blank">
+                    @jose.m4nuel
+                </a>
+            </li>
+            <li>YouTube:
+                <a href="https://www.youtube.com/c/IndieForever" target="_blank">
+                    IndieForever
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
